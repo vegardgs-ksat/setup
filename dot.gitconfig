@@ -1,0 +1,16 @@
+[push]
+	default = simple
+[user]
+	name = Vegard Sandengen
+	email = vegardgs@ksat.no
+[core]
+	whitespace = tab-in-indent
+	editor = vi
+[format]
+    pretty = fuller
+[alias]
+    ol = log --oneline --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+[pager]
+	branch = false
+[pull]
+	rebase = false
