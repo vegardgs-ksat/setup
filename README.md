@@ -19,6 +19,9 @@
 
 - Install karabiner-elementers
   - install config
+- Install Rectangle
+  - install config
+  (config must be manually imported/exported...)
 
 # Configure 
 
