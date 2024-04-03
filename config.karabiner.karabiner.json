@@ -18,21 +18,14 @@
                 },
                 "rules": [
                     {
-                        "description": "Alt+Tab => Cmd+Tab (Switch application) using Sticky Alt to Cmd Variable",
+                        "description": "PC-Style back/forward",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "name": "left_alt pressed",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "from": {
-                                    "key_code": "tab",
+                                    "key_code": "left_arrow",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "left_control"
                                         ],
                                         "optional": [
                                             "any"
@@ -41,7 +34,29 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "tab",
+                                        "key_code": "left_arrow",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
                                         "modifiers": [
                                             "left_command"
                                         ]
@@ -52,34 +67,24 @@
                         ]
                     },
                     {
-                        "description": "Sticky Alt to Cmd Variable",
+                        "description": "Change Language (Alt+Spacebar)",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "left_alt",
+                                    "key_code": "spacebar",
                                     "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
+                                        "mandatory": [
+                                            "left_option"
+                                        ],
+                                        "optional": []
                                     }
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "left_alt pressed",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "left_command"
+                                        "apple_vendor_top_case_key_code": "keyboard_fn",
+                                        "modifiers": []
                                     }
                                 ],
-                                "to_after_key_up": {
-                                    "set_variable": {
-                                        "name": "left_alt pressed",
-                                        "value": 0
-                                    }
-                                },
                                 "type": "basic"
                             }
                         ]
