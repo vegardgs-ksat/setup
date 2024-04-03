@@ -1,1 +1,4 @@
 theme = "solarized_dark"
+
+[editor]
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer"]

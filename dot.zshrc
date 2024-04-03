@@ -14,6 +14,9 @@ export EDITOR=vim
 export PATH="$PATH:/$HOME/.cargo/bin"
 export STARSHIP_CONFIG="$HOME/.starship.toml"
 
+# bring macOS libpg into path (for psql)
+export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
+
 
 ###
 ### Alias
@@ -47,7 +50,10 @@ compinit
 typeset -g -A key
 
 key[Home]=${terminfo[khome]}
+key[Home]="^[[H" # Override for macOS.
 key[End]=${terminfo[kend]}
+key[End]="^[[F" # Override for macOS
+
 key[Insert]=${terminfo[kich1]}
 key[Delete]=${terminfo[kdch1]}
 key[Up]=${terminfo[kcuu1]}
@@ -57,7 +63,7 @@ key[Right]=${terminfo[kcuf1]}
 key[PageUp]=${terminfo[kpp]}
 key[PageDown]=${terminfo[knp]}
 
-# setup key accordingly
+## setup key accordingly
 [[ -n "${key[Home]}"    ]]  && bindkey  "${key[Home]}"    beginning-of-line
 [[ -n "${key[End]}"     ]]  && bindkey  "${key[End]}"     end-of-line
 [[ -n "${key[Insert]}"  ]]  && bindkey  "${key[Insert]}"  overwrite-mode
@@ -67,18 +73,18 @@ key[PageDown]=${terminfo[knp]}
 [[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}"    backward-char
 [[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}"   forward-char
 
-# Finally, make sure the terminal is in application mode, when zle is
-# active. Only then are the values from $terminfo valid.
+
+## Finally, make sure the terminal is in application mode, when zle is
+## active. Only then are the values from $terminfo valid.
 function zle-line-init () {
-    echoti smkx
+  echoti smkx
 }
 function zle-line-finish () {
-    echoti rmkx
+  echoti rmkx
 }
 
 if [ -n "${DISPLAY:-}" ]; then
-   zle -N zle-line-init
-   zle -N zle-line-finish
+  zle -N zle-line-init
+  zle -N zle-line-finish
 fi
-
 

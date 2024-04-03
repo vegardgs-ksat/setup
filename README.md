@@ -23,6 +23,8 @@
   - install config
   (config must be manually imported/exported...)
 
+- Copy the `macos.DefaultKeyBinding.dict` to `$HOME/Library/KeyBindings/DefaultKeyBinding.dict`
+
 # Configure 
 
 - General: install from repository root
