@@ -34,3 +34,5 @@
   * `ln -fs $(pwd)/cargo.config.toml ~/.cargo/config.toml`  
   * `ln -fs $(pwd)/config.zellij.config.kdl ~/.config/zellij/config.kdl`  
   * `ln -fs $(pwd)/config.karabiner.karabiner.json ~/.config/karabiner/karabiner.json`  
+  * `ln -fs $(pwd)/config.helix.config.json ~/.config/helix/config.json`  
+  * `ln -fs $(pwd)/config.helix.languages.toml ~/.config/helix/languages.toml`  
