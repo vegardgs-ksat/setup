@@ -1,10 +1,12 @@
 keybinds {
     shared_except "move" "locked" {
-	unbind "Ctrl h"
-	bind "Ctrl b" { SwitchToMode "Move"; }
+        unbind "Ctrl h"
+        bind "Ctrl b" { SwitchToMode "Move"; }
+        unbind "Ctrl o"
+        bind "Ctrl y" { SwitchToMode "Session"; }
     }
     normal {
-	bind "Ctrl h" { GoToPreviousTab; }
-	bind "Ctrl l" { GoToNextTab; }
+        bind "Ctrl h" { GoToPreviousTab; }
+        bind "Ctrl l" { GoToNextTab; }
     }
 }
