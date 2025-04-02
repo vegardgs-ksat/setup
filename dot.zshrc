@@ -28,6 +28,22 @@ alias ll="ls -ltra --color"
 alias tree="erd"
 
 
+alias az-vm-preprod="az network bastion ssh \
+  --name bas-vnet-shared-preprod-kogs \
+  --resource-group rg-shared-preprod-kogs \
+  --target-resource-id /subscriptions/d95b0a42-98b6-4180-8175-f2d49e8ca103/resourceGroups/rg-shared-preprod-kogs/providers/Microsoft.Compute/virtualMachines/vm-jumphost-preprod-kogs \
+  --auth-type ssh-key \
+  --username kogsadmin \
+  --ssh-key ~/.ssh/id_ed25519"
+alias az-vm-test="az network bastion ssh \
+  --name bas-vnet-shared-test-kogs \
+  --resource-group rg-shared-test-kogs \
+  --target-resource-id /subscriptions/0f5bb71f-7d0d-4c99-ba91-24a33706170f/resourceGroups/rg-shared-test-kogs/providers/Microsoft.Compute/virtualMachines/vm-jumphost-test-kogs \
+  --auth-type ssh-key \
+  --username kogsadmin \
+  --ssh-key ~/.ssh/id_ed25519"
+
+
 ###
 ### Terminal Multiplexer
 ###
@@ -88,3 +104,5 @@ if [ -n "${DISPLAY:-}" ]; then
   zle -N zle-line-finish
 fi
 
+
+. "$HOME/.local/bin/env"

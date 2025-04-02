@@ -9,4 +9,10 @@ keybinds {
         bind "Ctrl h" { GoToPreviousTab; }
         bind "Ctrl l" { GoToNextTab; }
     }
+    tab {
+        bind "Shift h" { MoveTab "Left"; }
+        bind "Shift Left" { MoveTab "Left"; }
+        bind "Shift l" { MoveTab "Right"; }
+        bind "Shift Right" { MoveTab "Right"; }
+    }
 }

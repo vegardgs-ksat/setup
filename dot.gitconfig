@@ -1,5 +1,20 @@
+[advice]
+	skippedCherryPicks = false
+[branch]
+	sort = -committerdate
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
 [push]
 	default = simple
+	autoSetupRemote = true
+	followTags = true
 [user]
 	name = Vegard Sandengen
 	email = vegardgs@ksat.no
@@ -15,4 +30,10 @@
 [pull]
 	rebase = false
 [rebase]
-	autosquash = true
+	autoSquash = true
+	updateRefs = true
+[tag]
+	sort = version:refname
+[rerere]
+	enabled = true
+	autoupdate = true

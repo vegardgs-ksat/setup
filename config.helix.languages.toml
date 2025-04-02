@@ -1,2 +1,7 @@
 [language-server.rust-analyzer.config]
 diagnostics.disabled = ["unlinked-file"]
+
+[[language]]
+name = "markdown"
+rulers = [120]
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md"], auto-format = true }

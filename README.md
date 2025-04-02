@@ -14,6 +14,10 @@
   * zellij
 - Install helix: https://docs.helix-editor.com/install.html#installing-helix
   * MacOS: brew install helix
+- Install markman (helix LSP)
+  * MacOs: brew install markman
+- Install dprint (helix formatter)
+  * MacOs: brew install dprint
 
 ## MacOS
 
@@ -36,3 +40,4 @@
   * `ln -fs $(pwd)/config.karabiner.karabiner.json ~/.config/karabiner/karabiner.json`  
   * `ln -fs $(pwd)/config.helix.config.json ~/.config/helix/config.json`  
   * `ln -fs $(pwd)/config.helix.languages.toml ~/.config/helix/languages.toml`  
+  * `ln -fs $(pwd)/config.dprint.json ~/.dprint.json`  
