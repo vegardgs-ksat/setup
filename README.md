@@ -40,4 +40,4 @@
   * `ln -fs $(pwd)/config.karabiner.karabiner.json ~/.config/karabiner/karabiner.json`  
   * `ln -fs $(pwd)/config.helix.config.json ~/.config/helix/config.json`  
   * `ln -fs $(pwd)/config.helix.languages.toml ~/.config/helix/languages.toml`  
-  * `ln -fs $(pwd)/config.dprint.json ~/.dprint.json`  
+  * `ln -fs $(pwd)/dot.dprint.json ~/.dprint.json`  
