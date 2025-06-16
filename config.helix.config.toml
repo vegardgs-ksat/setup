@@ -3,3 +3,6 @@ theme = "solarized_dark"
 [editor]
 gutters = ["diagnostics", "spacer", "line-numbers", "spacer"]
 
+[keys.normal.space]
+i = ":toggle lsp.display-inlay-hints"
+

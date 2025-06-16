@@ -27,7 +27,13 @@ alias ls="ls --color"
 alias ll="ls -ltra --color"
 alias tree="erd"
 
-
+alias az-vm-prod="az network bastion ssh \
+  --name bas-vnet-shared-prod-kogs \
+  --resource-group rg-shared-prod-kogs \
+  --target-resource-id /subscriptions/31cf1aaa-6bc6-4231-8dc1-7c9ca709c559/resourceGroups/rg-shared-prod-kogs/providers/Microsoft.Compute/virtualMachines/vm-jumphost-prod-kogs \
+  --auth-type ssh-key \
+  --username kogsadmin \
+  --ssh-key ~/.ssh/id_ed25519"
 alias az-vm-preprod="az network bastion ssh \
   --name bas-vnet-shared-preprod-kogs \
   --resource-group rg-shared-preprod-kogs \
@@ -42,6 +48,21 @@ alias az-vm-test="az network bastion ssh \
   --auth-type ssh-key \
   --username kogsadmin \
   --ssh-key ~/.ssh/id_ed25519"
+alias az-vm-dev="az network bastion ssh \
+  --name bas-vnet-shared-dev-kogs \
+  --resource-group rg-shared-dev-kogs \
+  --target-resource-id /subscriptions/e81ec40d-f9d6-4b34-9d5c-fc9e20cf141f/resourceGroups/rg-shared-dev-kogs/providers/Microsoft.Compute/virtualMachines/vm-jumphost-dev-kogs \
+  --auth-type ssh-key \
+  --username kogsadmin \
+  --ssh-key ~/.ssh/id_ed25519"
+
+
+alias az-vm-prod-tunnel="az network bastion tunnel\
+  --name bas-vnet-shared-prod-kogs \
+  --resource-group rg-shared-prod-kogs \
+  --target-resource-id /subscriptions/31cf1aaa-6bc6-4231-8dc1-7c9ca709c559/resourceGroups/rg-shared-prod-kogs/providers/Microsoft.Compute/virtualMachines/vm-jumphost-prod-kogs \
+  --resource-port 22 \
+  --port 50022"
 
 
 ###

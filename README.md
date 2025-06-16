@@ -1,10 +1,21 @@
 # Setup new computer
 
+
+## Prereq: Ubuntu
+
+- apt install
+  * build-essential
+  * pkg-config
+  * libfontconfig1-dev
+  
+## Software
+
 - Install homebrew
   * Mac only
 - Install rustup through rustup.rs
 - Install rust programs through cargo install
   * alacritty
+    * Must also install desktop-entry manually - see github repo source
   * jless
   * ripgrep
   * xh
@@ -32,12 +43,14 @@
 # Configure 
 
 - General: install from repository root
-  * `ln -fs $(pwd)/dot.zshrc ~/.zshrc`  
-  * `ln -fs $(pwd)/dot.alacritty.toml ~/.alacritty.toml`  
-  * `ln -fs $(pwd)/dot.gitconfig ~/.gitconfig`  
-  * `ln -fs $(pwd)/cargo.config.toml ~/.cargo/config.toml`  
-  * `ln -fs $(pwd)/config.zellij.config.kdl ~/.config/zellij/config.kdl`  
-  * `ln -fs $(pwd)/config.karabiner.karabiner.json ~/.config/karabiner/karabiner.json`  
-  * `ln -fs $(pwd)/config.helix.config.json ~/.config/helix/config.json`  
-  * `ln -fs $(pwd)/config.helix.languages.toml ~/.config/helix/languages.toml`  
-  * `ln -fs $(pwd)/dot.dprint.json ~/.dprint.json`  
+```
+ln -fs $(pwd)/dot.zshrc ~/.zshrc
+ln -fs $(pwd)/dot.alacritty.toml ~/.alacritty.toml
+ln -fs $(pwd)/dot.gitconfig ~/.gitconfig
+ln -fs $(pwd)/cargo.config.toml ~/.cargo/config.toml
+ln -fs $(pwd)/config.zellij.config.kdl ~/.config/zellij/config.kdl
+ln -fs $(pwd)/config.karabiner.karabiner.json ~/.config/karabiner/karabiner.json
+ln -fs $(pwd)/config.helix.config.json ~/.config/helix/config.json
+ln -fs $(pwd)/config.helix.languages.toml ~/.config/helix/languages.toml
+ln -fs $(pwd)/dot.dprint.json ~/.dprint.json
+```
