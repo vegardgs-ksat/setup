@@ -17,6 +17,10 @@ export STARSHIP_CONFIG="$HOME/.starship.toml"
 # bring macOS libpg into path (for psql)
 export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
 
+# dotnet
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
+
 
 ###
 ### Alias

@@ -38,6 +38,8 @@
 - Install markman (helix LSP)
   - MacOs: brew install markman
   - snap: sudo snap install marksman
+- Install harper-ls (helix LSP)
+  - MacOs: brew install harper-ls
 - Install dprint (helix formatter)
   - MacOs: brew install dprint
   - cargo: cargo install --locked dprint

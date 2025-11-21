@@ -18,6 +18,7 @@
 [user]
 	name = Vegard Sandengen
 	email = vegardgs@ksat.no
+	signingkey = /Users/vegardgs/.ssh/id_ed25519
 [core]
 	whitespace = tab-in-indent
 	editor = vi
@@ -37,3 +38,7 @@
 [rerere]
 	enabled = true
 	autoupdate = true
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true

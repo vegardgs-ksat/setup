@@ -1,7 +1,22 @@
 [language-server.rust-analyzer.config]
 diagnostics.disabled = ["unlinked-file"]
+cargo = { allFeatures = true }
+
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]
+
+[language-server.omnisharp]
+command = "/Users/vegardgs/language_servers/omnisharp-roslyn/OmniSharp"
+args = ["-lsp"]
+timeout = 10000
+
+[[language]]
+name = "rust"
+auto-format = true
 
 [[language]]
 name = "markdown"
 rulers = [120]
 formatter = { command = "dprint", args = ["fmt", "--stdin", "md"], auto-format = true }
+language-servers = ["marksman", "harper-ls"]
