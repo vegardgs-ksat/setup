@@ -19,7 +19,7 @@ export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
 
 # dotnet
 export DOTNET_ROOT=$HOME/.dotnet
-export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
+export PATH="$DOTNET_ROOT:$DOTNET_ROOT/tools:$PATH"
 
 
 ###
