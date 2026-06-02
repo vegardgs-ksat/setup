@@ -18,7 +18,7 @@
 [user]
 	name = Vegard Sandengen
 	email = vegardgs@ksat.no
-	signingkey = /Users/vegardgs/.ssh/id_ed25519
+	signingkey = /Users/vegardgs/.ssh/work-mac
 [core]
 	whitespace = tab-in-indent
 	editor = vi

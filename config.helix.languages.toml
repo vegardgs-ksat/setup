@@ -11,6 +11,7 @@ command = "/Users/vegardgs/language_servers/omnisharp-roslyn/OmniSharp"
 args = ["-lsp"]
 timeout = 10000
 
+
 [[language]]
 name = "rust"
 auto-format = true
@@ -20,3 +21,7 @@ name = "markdown"
 rulers = [120]
 formatter = { command = "dprint", args = ["fmt", "--stdin", "md"], auto-format = true }
 language-servers = ["marksman", "harper-ls"]
+
+[[language]]
+name = "json"
+formatter = { command = "dprint", args = ["fmt", "--stdin", "json"], auto-format = true}

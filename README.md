@@ -43,6 +43,10 @@
 - Install dprint (helix formatter)
   - MacOs: brew install dprint
   - cargo: cargo install --locked dprint
+- Install yaml-language-server
+  - MacOs: brew install yaml-language-server
+- Install vscode-langservers-extracted
+  - npm: npm install -g  vscode-langservers-extracted
 - Install dbeaver
   - snap: sudo snap install dbeaver-ce
 
@@ -60,14 +64,20 @@
 - General: install from repository root
 
 ```
+mkdir ~/.config
 ln -fs $(pwd)/dot.zshrc ~/.zshrc
 ln -fs $(pwd)/dot.starship.toml ~/.starship.toml
 ln -fs $(pwd)/dot.alacritty.toml ~/.alacritty.toml
 ln -fs $(pwd)/dot.gitconfig ~/.gitconfig
 ln -fs $(pwd)/cargo.config.toml ~/.cargo/config.toml
+mkdir ~/.config/zellij
 ln -fs $(pwd)/config.zellij.config.kdl ~/.config/zellij/config.kdl
+mkdir ~/.config/karabiner
 ln -fs $(pwd)/config.karabiner.karabiner.json ~/.config/karabiner/karabiner.json
+mkdir ~/.config/helix
 ln -fs $(pwd)/config.helix.config.toml ~/.config/helix/config.toml
 ln -fs $(pwd)/config.helix.languages.toml ~/.config/helix/languages.toml
 ln -fs $(pwd)/dot.dprint.json ~/.dprint.json
+ln -fs $(pwd)/config.zed.settings.json ~/.config/zed/settings.json
+ln -fs $(pwd)/config.zed.keymap.json ~/.config/zed/keymap.json
 ```

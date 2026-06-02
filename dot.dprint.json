@@ -1,5 +1,7 @@
 {
-  "json": {},
+  "json": {
+    "trailingCommas": "never"
+  },
   "markdown": {
     "lineWidth": 120,
     "textWrap": "always"

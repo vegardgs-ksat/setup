@@ -18,7 +18,7 @@ export STARSHIP_CONFIG="$HOME/.starship.toml"
 export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
 
 # dotnet
-export DOTNET_ROOT=$HOME/.dotnet
+export DOTNET_ROOT=/usr/local/share/dotnet
 export PATH="$DOTNET_ROOT:$DOTNET_ROOT/tools:$PATH"
 
 
